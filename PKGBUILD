@@ -1,7 +1,7 @@
 pkgname=opennebula
 pkgver=$VERSION
 pkgrel=1
-pkgdesc="Virtual management infrastructure as a service (IaaS) toolkit for cloud computing (NOTE: Read the PKGBUILD!)"
+pkgdesc="Developer Package of OpenNebula"
 arch=('x86_64')
 url='http://docs.opennebula.org/stable'
 license=('Apache')
