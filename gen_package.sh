@@ -33,7 +33,6 @@ TAR=$START_DIR/opennebula-${full_version}.tar.gz
 
 git ls-files --exclude-standard -z | tar czf $TAR --null -T -
 
-
 ################################################################################
 # Create Package
 ################################################################################
