@@ -1,0 +1,14 @@
+--- src/install.sh   2015-05-06 14:36:24.000000000 +0200
++++ src/install.sh 2015-05-06 15:34:31.388075106 +0200
+@@ -111,8 +111,8 @@
+     ONEFLOW_LOCATION="$LIB_LOCATION/oneflow"
+     SYSTEM_DS_LOCATION="$VAR_LOCATION/datastores/0"
+     DEFAULT_DS_LOCATION="$VAR_LOCATION/datastores/1"
+-    RUN_LOCATION="/var/run/one"
+-    LOCK_LOCATION="/var/lock/one"
++    RUN_LOCATION="/run/one"
++    LOCK_LOCATION="/run/lock/one"
+     INCLUDE_LOCATION="/usr/include"
+     SHARE_LOCATION="/usr/share/one"
+     MAN_LOCATION="/usr/share/man/man1"
+

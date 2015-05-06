@@ -5,7 +5,11 @@ pkgdesc="Developer Package of OpenNebula"
 arch=('x86_64')
 url='http://docs.opennebula.org/stable'
 license=('Apache')
-source=("$TAR")
+source=("$TAR" "fix_dirs.patch")
+
+prepare(){
+    patch -p1 -i $srcdir/fix_dirs.patch
+}
 
 build() {
     cd "${srcdir}"
