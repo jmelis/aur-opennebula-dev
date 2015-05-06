@@ -5,6 +5,7 @@ pkgdesc="Developer Package of OpenNebula"
 arch=('x86_64')
 url='http://docs.opennebula.org/stable'
 license=('Apache')
+install=${pkgname}.install
 source=("$TAR" "fix_dirs.patch")
 
 prepare(){

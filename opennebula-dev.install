@@ -1,0 +1,30 @@
+stop_opennebula() {
+    # stop OpenNebula
+    one stop >/dev/null 2>&1
+    return 0
+}
+
+backup_var_lib_one(){
+    # backup previous opennebula
+    [ -d /var/lib/one ] && mv /var/lib/one /var/lib/one.$(date +%Y-%m-%d-%H-%M-%S)
+    return 0
+}
+
+pre_remove() {
+    stop_opennebula
+}
+
+post_remove(){
+    backup_var_lib_one
+}
+
+
+pre_install() {
+    stop_opennebula
+    backup_var_lib_one
+}
+
+pre_upgrade() {
+    stop_opennebula
+    backup_var_lib_one
+}
