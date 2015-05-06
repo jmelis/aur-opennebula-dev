@@ -1,4 +1,4 @@
-pkgname=opennebula
+pkgname=opennebula-dev
 pkgver=$VERSION
 pkgrel=1
 pkgdesc="Developer Package of OpenNebula"

@@ -1,6 +1,7 @@
 #!/bin/bash
 
 START_DIR=$PWD
+PKG_NAME=opennebula-dev
 
 ################################################################################
 # Clean files in build dir
@@ -29,7 +30,7 @@ full_version=$version-$branch-$commit
 full_version_pkgbuild=$version.$branch.$commit
 [ -n "$dirty" ] && full_version_pkgbuild+=.dirty
 
-TAR=$START_DIR/opennebula-${full_version}.tar.gz
+TAR=$START_DIR/$PKG_NAME-${full_version}.tar.gz
 
 git ls-files --exclude-standard -z | tar czf $TAR --null -T -
 
