@@ -40,5 +40,4 @@ git ls-files --exclude-standard -z | tar czf $TAR --null -T -
 
 cd $START_DIR
 
-
 VERSION=$full_version_pkgbuild TAR=$TAR makepkg --skipinteg
