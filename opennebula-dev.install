@@ -10,6 +10,11 @@ backup_var_lib_one(){
     return 0
 }
 
+fix_perms() {
+    USER=${SUDO_USER:-root}
+    chown -R $SUDO_USER: /var/{lock,run,lib}/one /etc/one
+}
+
 pre_remove() {
     stop_opennebula
 }
@@ -24,7 +29,16 @@ pre_install() {
     backup_var_lib_one
 }
 
+post_install() {
+    fix_perms
+}
+
 pre_upgrade() {
     stop_opennebula
     backup_var_lib_one
 }
+
+post_upgrade() {
+    fix_perms
+}
+
